@@ -1,6 +1,9 @@
 import express from "express";
+import { db } from "./services/firebase.js";
 import cors from "cors";
 import bodyParser from "body-parser";
+import dotenv from "dotenv";
+dotenv.config();
 
 import movieRoutes from "./routes/movies.routes.js";
 import authRoutes from "./routes/auth.routes.js";
