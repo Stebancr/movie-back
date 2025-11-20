@@ -39,7 +39,6 @@ export const loginUser = async (req, res) => {
 
     const { idToken, refreshToken, localId } = response.data;
 
-    // 2. Verificamos el token con Firebase Admin (opcional pero recomendado)
     const decoded = await auth.verifyIdToken(idToken);
 
     res.status(200).json({
